@@ -1,0 +1,33 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-left">
+                <h2>Employees</h2>
+            </div>
+            <div class="pull-right" style="margin-top:20px;">
+                <input id="search_box" placeholder="Search by Id" type="text" /> <button id="search_btn" type='button' class='btn btn-primary'>Search</button>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <table id="table-employees" class="table table-striped">
+                <thead>
+                    <tr><th>Id</th><th>Name</th><th>Contract Type</th><th>Role</th><th style="text-align: right">Salary</th><th style="text-align: right">Annual Salary</th><th style="width:20%"></th></tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function ()
+    {
+        $('#search_btn').on("click", function ()
+        {
+            RefreshEmployeesGrid();
+        });
+
+        RefreshEmployeesGrid();
+    });
+</script>
